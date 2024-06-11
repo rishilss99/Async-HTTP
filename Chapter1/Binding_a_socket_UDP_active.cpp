@@ -25,7 +25,7 @@ int main()
 	sock.bind(ep, ec);
 
 	// Handling errors if any.
-	if (ec != 0) {
+	if (ec.value() != 0) {
 		// Failed to bind the socket. Breaking execution.
 		std::cout << "Failed to bind the socket."
 			<< "Error code = " << ec.value() << ". Message: "
