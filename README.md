@@ -83,8 +83,8 @@ After an instance of the Service class has been constructed, its `start_handling
 
 ```cpp
 asio::async_read_until(*m_sock.get(), m_request, "\r\n",
-						[this](const boost::system::error_code &ec, std::size_t bytes_transferred)
-						{on_request_line_received(ec, bytes_transferred);});
+	  [this](const boost::system::error_code &ec, std::size_t bytes_transferred)
+      {on_request_line_received(ec, bytes_transferred);});
 ```
 
 
